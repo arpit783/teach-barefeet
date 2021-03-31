@@ -47,6 +47,8 @@ app.post("/", function(req, res){
   db.collection('Call Me').doc(queryData.name).set(queryData).then(() =>{
     console.log('new qurey added to Call Me db');
   });
+
+  res.redirect("/");
 })
 
 const PORT = process.env.PORT || 3000;
